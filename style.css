@@ -261,7 +261,7 @@ video{
     margin-right: 50px;
     transition: all linear 0.2s;
     color:transparent;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
 }
 #scroller h4:hover{
     background: linear-gradient(to right bottom,#ff7300,#ffffff,#00ff40 );
@@ -319,7 +319,7 @@ video{
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbNNfsPHUOpXCrvgz2zvBS3_GuG1efiESamw&s);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-    -webkit-text-stroke: 2px #ffffff;
+    -webkit-text-stroke: 2px #000000;
 }
 .card{
     margin: 0 auto;
