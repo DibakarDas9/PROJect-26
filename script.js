@@ -40,7 +40,7 @@ gsap.to("#nav", {
 });
 
 gsap.to("#main", {
-  backgroundColor: "#f0f8ff",
+  backgroundColor: "#000",
   scrollTrigger: {
     trigger: "#main",
     scroller: "body",
