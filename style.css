@@ -6,16 +6,56 @@
     color: rgb(255, 255, 255);
     scrollbar-color: #ffffff #000000; 
     scrollbar-width:thin;
+     /* background-color: transparent; */
+   /* z-index:-2; */
     /* cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FF0000" stroke="%23FFFFFF" stroke-width="1.75" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),auto; */
 }
+
+
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+}
+
+.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+
 
 html, body{
     height:100%;
     width:100%;
+/* 
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+ */
+
     cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FF0000" stroke="%23FFFFFF" stroke-width="1.75" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'),auto;
     
 
 }
+
+
+#mode-toggle {
+    position: relative;
+    top: 1px;
+    left: 25px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 24"><path fill="%23FF5E5E" stroke="%23FFFFFF" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),auto;
+    transition: transform 0.2s, background 0.3s;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.2);
+} 
+
+
 /* canvas{
     position: relative;
     z-index: 9;
@@ -37,7 +77,7 @@ video{
     height: 20px;
     width:20px; 
     /* background-color: #859fcf; */
-    background: linear-gradient(to left bottom , #1de0b6,#ffffff,#dde00b);
+    background: linear-gradient(to left bottom , #ffffff,#ffffff,#000000);
     border-radius: 50%;
     position:fixed;
     z-index: 10;
@@ -46,7 +86,7 @@ video{
 #cursor-blur{
     height: 200px;
     width:200px;
-    background: linear-gradient(to left bottom , #ff7300,#decdf1,#00ff40);
+    background: linear-gradient(to left bottom , #ecd6b5,#deecd9,#ccecd8);
     /* background-color: #ffee00; */
     border-radius: 50%;
     position:fixed;
@@ -59,17 +99,20 @@ video{
     width:100%;
     /* background-color: red; */
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center;
     padding: 0 25px;
-    gap: 50px;
+    gap: 20px;
     position:fixed;
     z-index:99;
+    /* border-color: #000; */
+    /* padding-bottom:2px; */
     
 }
 #nav img{
-    height: 65px;;
-    width: 74px;
+    /* background-color: red; */
+    height: 90px;;
+    width: 190px;
     transition: transform 0.2s ease-in-out 0.1s;
     
 }
@@ -99,20 +142,26 @@ video{
 }
 
 .explore {
-    background: linear-gradient(to left top, #147de6, #00fa85);
-    color: white;
-    padding: 10px 35px;
+    /* display:flex;
+    justify-content: flex-start; */
+    width:0%;
+    background: transparent;
+    color: black;
+    padding: 9px 19px;
     font-size: 16px;
     border: none;
     /* cursor: pointer; */
-    border-radius: 25px;
+    border-radius: 10px;
+    padding-right: 5%;
+    /* overflow: hidden; */
 }
 .explore:hover{
-    background: linear-gradient(to left bottom, #147de6, #00fa85);
+    color:#5000c7;
+    background:linear-gradient(to left bottom, rgb(235, 207, 248), white);
     transform: scale(1.09);
     cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 24"><path fill="%23FF5E5E" stroke="%23FFFFFF" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),auto;
     /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;  */
 }
 
 .search-container {
@@ -151,8 +200,8 @@ video{
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     transform: scaleX(1.09);
 }
-.log {
-    background: linear-gradient(to left top, white, #decdf1);
+.login {
+    background-color:white;
     /* background: #decdf1; */
     font-weight: 800;
     color: #6d28d2;
@@ -162,14 +211,35 @@ video{
     /* cursor: pointer; */
     border-radius: 10px;
 }
-.log:hover{
-    background: linear-gradient(to left bottom, #c7a6ec,white);
+.login:hover{
+    background:linear-gradient(to left bottom, #6d28d2,white, white);
     border:none;
-    transform: scale(1.09);
+    /* transform: scale(1.09); */
     cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23E38FFF" stroke="%23FFFFFF" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),auto;
     /* -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
 }
+
+.signup{
+    background: linear-gradient(to left bottom, #710ce4,white);
+    /* background: #decdf1; */
+    font-weight: 800;
+    color: #ffffff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-color:#6d28d2;
+    /* cursor: pointer; */
+    border-radius: 10px;
+}
+.signup:hover{
+    background: linear-gradient(to left top, white, #710ce4);
+    border:none;
+    /* transform: scale(1.09); */
+    cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23E38FFF" stroke="%23FFFFFF" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),auto;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
 .cart{
     background: transparent;
     border:none;
@@ -372,6 +442,7 @@ video{
     background-image: url("https://i.ytimg.com/vi/iG2jotQo9NI/maxresdefault.jpg");
     background-size:100% 100%;
     background-position:center;
+    transition-delay:100ms ;
     
     /* object-fit:cover; */
 
@@ -383,6 +454,7 @@ video{
     background-position: center;
     width: 310px;
     height:200px;
+    transition-delay:200ms ;
 }
 #card3{
     background-image: url("https://www.codingal.com/resources/wp-content/uploads/2023/08/Understanding-Python-Flask.png");
@@ -392,6 +464,7 @@ video{
     background-position: center;
     width: 310px;
     height:200px;
+    transition-delay:300ms ;
 }
 #card4{
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz3xcnAw5NgPo3tKVdBY-uYMrFhnde4yu_7g&s");
@@ -401,6 +474,7 @@ video{
     background-position: center;
     width: 310px;
     height:200px;
+    transition-delay:400ms ;
 }
 
 #overlay{

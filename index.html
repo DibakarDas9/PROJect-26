@@ -9,13 +9,26 @@
     
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const modeToggle = document.getElementById("mode-toggle");
+
+    modeToggle.addEventListener("click", function() {
+        document.body.classList.toggle("light-mode");
+        
+        // Toggle button emoji based on mode
+        modeToggle.innerText = document.body.classList.contains("light-mode") ? "🌛" : "🌞";
+    });
+});
+</script>
 <body>
     <div id="cursor"></div>
     <div id="cursor-blur"></div>
+    
 
     
     <div id="nav">
-        <img src="C:\Users\91896\Desktop\Proj-26\Files\ScholarSoar Logo.avif" alt="no image">
+        <img src="C:\Users\91896\Desktop\Proj-26\Files\SS New logo.png" alt="no image">
         <button class="explore">Explore </button>
         <div class="search-container">
             <input type="text" class="search-input" placeholder="🔍    Start your future from here...">
@@ -23,12 +36,16 @@
                 <!-- <i class="fas fa-search"></i>
             </button> -->
         </div>
+        <button class="navbtn">Plans & Pricing</button>
         <button class="navbtn">Online Certifications</button>
         <button class="navbtn">Teach on ScholarSoar</button>
         <button class="cart">🛒</button>
+        
         <form action="index2.html">
-        <button class="log">Login / Signup </button>
+        <button class="login">Login</button>
+        <button class="signup">Signup</button>
         </form>
+        <button id="mode-toggle">🌞</button>
     </div>
     <div id="main">
         <!-- <canvas></canvas> -->

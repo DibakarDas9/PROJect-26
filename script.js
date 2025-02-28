@@ -13,16 +13,14 @@ h4all.forEach(function (elem) {
   elem.addEventListener("mouseenter", function () {
     crsr.style.scale = 3;
     crsr.style.border = "1px solid #fff";
-    crsr.style.backgroundColor = "transparent";
+    crsr.style.background = "transparent";
   });
   elem.addEventListener("mouseleave", function () {
     crsr.style.scale = 1;
     crsr.style.border = "0px solid rgb(255, 255, 255)";
-    crsr.style.backgroundColor = "#95C11E";
+    crsr.style.background = "linear-gradient(to left bottom , #ffffff,#ffffff,#000000)";
   });
 });
-
-
 gsap.to("#nav", {
   backgroundColor: "#f0f8ff  ",   
   // #f0f8ff 
