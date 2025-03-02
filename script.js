@@ -8,6 +8,17 @@ document.addEventListener("mousemove", function (dets) {
   blur.style.top = dets.y - 87-1 + "px";
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const modeToggle = document.getElementById("mode-toggle");
+
+  modeToggle.addEventListener("click", function() {
+      document.body.classList.toggle("light-mode");
+      
+      // Toggle button emoji based on mode
+      modeToggle.innerText = document.body.classList.contains("light-mode") ? "🌛" : "🌞";
+  });
+});
+
 var h4all = document.querySelectorAll(".navbtn,.cart,#scroller-in");
 h4all.forEach(function (elem) {
   elem.addEventListener("mouseenter", function () {
@@ -21,6 +32,9 @@ h4all.forEach(function (elem) {
     crsr.style.background = "linear-gradient(to left bottom , #ffffff,#ffffff,#000000)";
   });
 });
+
+
+
 gsap.to("#nav", {
   backgroundColor: "#f0f8ff  ",   
   // #f0f8ff 

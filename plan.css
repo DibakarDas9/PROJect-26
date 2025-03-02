@@ -1,0 +1,154 @@
+
+.pricing-section {
+    padding: 100px 20px;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    text-align: center;
+    background:linear-gradient(to left top, rgb(250, 239, 239), rgb(255, 255, 255),rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+h1:hover{
+    background:linear-gradient(to left bottom, rgb(255, 255, 255), white,black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1::before{
+    content:"Empower your FUTURE from here!";
+    position:absolute;
+    -webkit-color-clip: text;
+    -webkit-text-fill-color: black;
+    top:-3px;
+    left:445px;
+    z-index:-1;
+    -webkit-text-stroke:1.09px #95C11E;
+}
+
+p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.plan {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+    text-align: left;
+    border-top: 5px solid #651dec;
+}
+
+.plan h2 {
+    font-size: 1.5em;
+    color: #000000;
+    animation: beat 1s infinite ease-in-out;
+}
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.01); 
+    }
+}
+.subheading {
+    font-size: 1em;
+    color: #666;
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.price span{
+    display:inline-block;
+    color: #666;
+    animation:beats 1s infinite ease-in-out;
+}
+@keyframes beats {
+    0%, 100% {
+        transform: scale(1) skewy(5deg);
+    }
+    50% {
+        transform: scale(1.01) skewy(-5deg); /* Slants backward */
+    }
+}
+
+.billing {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.btn {
+    background: linear-gradient(to left bottom, rgb(0, 0, 0), rgb(9, 73, 211));
+    
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+.btn span{
+    display: inline-block;
+    transition: transform 0.1s ease-in-out;
+}
+.btn:hover {
+    background:linear-gradient(to left bottom, rgb(9, 73, 211), rgb(0, 0, 0));
+
+}
+.btn:hover span {
+    transform: scale(1.09); /* Increases text size */
+}
+
+
+.btnenter {
+    background: linear-gradient(to left bottom, rgb(0, 0, 0), rgb(219, 52, 108));
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+.btnenter span{
+    display: inline-block;
+    transition: transform 0.1s ease-in-out;
+}
+.btnenter:hover {
+    background:linear-gradient(to left bottom, rgb(219, 52, 108), rgb(0, 0, 0));
+
+}
+.btnenter:hover span {
+    transform: scale(1.09); /* Increases text size */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    font-size: 0.9em;
+    color: #444;
+    margin: 10px 0;
+}
