@@ -33,14 +33,30 @@ h4all.forEach(function (elem) {
   });
 });
 
+let currentIndex = 0;
+const totalSlides = document.querySelectorAll('.slide').length;
 
+function updateSlide() {
+    const slides = document.querySelector('.slides');
+    slides.style.transform = `translateX(-${currentIndex * 100}vw)`;
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides; // Loop back after last slide
+    updateSlide();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loop back before first slide
+    updateSlide();
+}
 
 gsap.to("#nav", {
   backgroundColor: "#f0f8ff  ",   
   // #f0f8ff 
   // opacity:18,
   // duration: 0.5,
-  height: "89px",
+  height: "80px",
   scrollTrigger: {
     trigger: "#nav",
     scroller: "body",

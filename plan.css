@@ -76,7 +76,12 @@ p {
 }
 .price span{
     display:inline-block;
-    color: #666;
+    /* color: #ff0000; */
+    background:linear-gradient(to right bottom, rgb(0, 0, 0), rgb(221, 30, 30),rgb(0, 0, 0));
+    /* background: conic-gradient(from 0deg, #000000, #000000, #ff000d, #ff0000); */
+    -webkit-background-clip: text;
+    /* background-clip:text; */
+    -webkit-text-fill-color: transparent;
     animation:beats 1s infinite ease-in-out;
 }
 @keyframes beats {
