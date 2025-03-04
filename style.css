@@ -329,6 +329,16 @@ video{
     left: 14%;
     z-index: -1;
 }
+.slide video {
+    width: 81%;
+    height: 75%;
+    object-fit: cover;
+    position: absolute;
+    top:14%;
+    left: 14%;
+    z-index: -1;
+}
+
 
 .content-box {
     top: 59%;
@@ -443,7 +453,7 @@ video{
 }
 #page2{
     /* background-color: red; */
-    min-height:40vh;
+    height:26vh;
     width:100%;
     z-index:10;
 }
@@ -476,7 +486,7 @@ video{
     margin-right: 50px;
     transition: all linear 0.2s;
     color:transparent;
-    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgb(0, 0, 0); 
 }
 #scroller h4:hover{
     background: linear-gradient(to right bottom,#ff7300,#ffffff,#00ff40 );
@@ -495,24 +505,58 @@ video{
     }
 }
 #details1{
+    /* color: #ffffff; */
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    padding: 20px;
-    background:linear-gradient(to left bottom,#222,#2d2f31,#000); 
-    transition: color 0.3s ease, transform 0.3s ease;
-    /* z-index: ; */
+    /* font-size: 24px; */
+    /* font-weight: bold; */
+    padding: 14px;
+    /* background: linear-gradient(to right bottom, #d1cfcf, #ffffff,#330a0a);    */
+    /* z-index: ;*/
 
 }
-/* #details1:hover h2{
-  color: #95C11E;
-  transform: scale(1.05);
-  cursor: pointer;
-} */
+#details1 h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: 'Snap ITC';
+    background: linear-gradient(to left bottom, #000000, #000000, #0400ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation: fadeLift 0.5s infinite alternate ease-in-out;
+    display: inline-block;
+    position: relative;
+    /* padding-bottom: 1px;  */
+}
+
+
+#details1 h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left bottom, #000000, #000000, #0400ff);
+    filter: blur(7px);
+    box-shadow: 0px 0px 1px rgb(0, 0, 0); 
+}
+
+
+@keyframes fadeLift {
+    0% {
+        opacity: 0.9;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+}
+
+
 #card-container{
     text-align: center;
-    height:75vh;
+    height:60vh;
     /* width: 97vw; */
     display:flex;
     flex-wrap: wrap;
@@ -527,14 +571,14 @@ video{
 #card-container h1{
     font-size: 6.4vw;
     position: absolute;
-    top:16%;
+    top:5%;
     font-weight: 100;
     font-family: gilroy;
     color: #000000;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbNNfsPHUOpXCrvgz2zvBS3_GuG1efiESamw&s);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-    -webkit-text-stroke: 2px #ffffff;
+    -webkit-text-stroke: 0.9px #000000 ;
 }
 .card{
     margin: 0 auto;
@@ -549,27 +593,6 @@ video{
     cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 24"><path fill="%23FF5E5E" stroke="%23FFFFFF" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),auto;
     /* z-index:11; */
 }
-
-/* 
-    height:70%;
-    width: 22%;
-    border-radius: 20px;
-    overflow:hidden;
-    transition: all ease 0.1;
-    background:linear-gradient(to left bottom,#ff7300,#ffffff,#00fa85);
-    z-index:11;
-    position: relative;
-
-
-  margin: 0 auto;
-  padding: 2em;
-  width: 300px;
-  background: #1c1f2b;
-  text-align: center;
-  border-radius: 10px;
-  position: relative; 
-  
-  */
 
 #card1{
     width: 310px;
@@ -637,10 +660,10 @@ video{
     font-size:18px;
 }
 /* .card:hover #overlay{
-    opacity:1;
-}
+    opacity:0;
+} */
 
-.card:hover {
+/* .card:hover {
     transform: scale3d(1.1, 1.2,1) 
  } */
 
@@ -657,11 +680,11 @@ video{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 80%,#0bff0b,white,#ff7300);
+    background-image: conic-gradient(from var(--angle), transparent 80%,#ffe600,rgb(255, 255, 255),#f00c50);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    z-index: -2;
+    z-index: -1;
     padding: 3px;
     border-radius: 10px;
     animation: 3s spin linear infinite;
@@ -678,4 +701,141 @@ video{
       --angle: 360deg;
     }
   }
+  .container {
+    width: 100%;
+    margin: auto;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .right-section {
+    width: 45%;
+    position: relative;
+  }
+  .left-section {
+    border-radius:50%;
+    /* overflow:hidden; */
+    transform: translateX(60px);
+    width: 40%;
+    height:20%;
+  }
+  .left-section video{
+    border-radius:50%;
+    top:-70px;
+    width: 100%;
+    padding:70px 0px;
+    transition: transform 0.2s ;
+  }
+  .left-section video {
+    width: 100%;
+    transition: transform 0.2s ;
+}
+.left-section:hover video{
+    transform: scale(1.05) skew(1deg);
+}
 
+.right-section h1 {
+    background: linear-gradient(to left bottom, #000, #a855f7, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 39px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+#seperate:hover h1 {
+    animation: bounce 1.5s ease-in-out ;
+}
+
+#seperate::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px; 
+    width: 100px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transform: translateX(-50%) scale(0.5);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#seperate:hover::after {
+    animation: shadowBounce 1.5s ease-in-out infinite;
+    opacity: 1;
+}
+
+/* Up Bounce (I'll remove this on the final touch)*/
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-40px); } /* up */
+    50% { transform: translateY(10px); }  /* slight fall */
+    65% { transform: translateY(-20px); } /* slight bounce */
+    100% { transform: translateY(0); }    /* original pos*/
+}
+
+/* Shadow */
+@keyframes shadowBounce {
+    0% { width: 100px; opacity: 0.5; }
+    30% { width: 130px; opacity: 0.8; } /* Expands-text goes up */
+    50% { width: 90px; opacity: 0.4; }  /* Shrink-text bounces */
+    65% { width: 110px; opacity: 0.6; } /* Adjust-small bounce */
+    100% { width: 100px; opacity: 0.5; } /* Back*/
+}
+
+  .option {
+    background-color: white;
+    border: 2px solid transparent;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  .option:hover {
+    border-color: #a855f7;
+    transform:scaley(1.1);
+    border-radius: 25px;
+  }
+  .option.active {
+    /* border-color: #a855f7; */
+    box-shadow: 0px 0px 10px rgba(168, 85, 247, 0.3);
+  }
+  .option img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    transition: transform 0.2s ease-in-out 0.1s;
+  }
+  .option:hover img{
+    transform:scale(1.5);
+  }
+  .text-content h3 {
+    color:black;
+    margin: 0;
+    font-size: 18px;
+  }
+  .text-content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+  .enterprise {
+    background: #eee;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #333;
+    margin-left: 8px;
+  }
+
+  .left-section video.active {
+    display: block;
+  }
