@@ -1,13 +1,14 @@
 
 .pricing-section {
-    padding: 100px 20px;
+    padding: 150px 20px;
 }
 
-h1 {
+.pricing-section h1 {
+    margin-top:30px;
     font-size: 2.2em;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     text-align: center;
-    background:linear-gradient(to left top, rgb(0, 0, 0), rgb(199, 123, 10),rgb(0, 0, 0));
+    background:linear-gradient(to left top, rgb(0, 0, 0), rgb(3, 6, 146),rgb(0, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* background: #00c3ff;  fallback for old browsers */
@@ -17,23 +18,23 @@ h1 {
     -webkit-text-fill-color: transparent; */
     position: relative;
 }
-h1:hover{
-    background:linear-gradient(to left bottom, rgb(255, 255, 255), white,black);
+.pricing-section h1:hover{
+    background:linear-gradient(to right top, rgb(55, 148, 11), rgb(255, 255, 255),rgb(248, 134, 4));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-h1::before{
+/* h1::before{
     content:"Empower your FUTURE from here!";
     position:absolute;
     -webkit-color-clip: text;
-    -webkit-text-fill-color: black;
-    top:-3px;
-    left:445px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    top:-2px;
+    left:446px;
     z-index:-1;
-    -webkit-text-stroke:1.09px #95C11E;
-}
+    -webkit-text-stroke:1.09px rgb(170, 170, 206);
+} */
 
-p {
+.pricing-section p {
     color: #555;
     font-size: 1em;
     margin-bottom: 30px;
@@ -43,14 +44,14 @@ p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 100px;
 }
 
 .plan {
     background: white;
     border-radius: 10px;
-    padding: 20px;
-    width: 300px;
+    padding: 30px;
+    width: 340px;
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
     text-align: left;
     border-top: 5px solid #651dec;

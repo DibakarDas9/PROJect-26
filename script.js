@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
       document.body.classList.toggle("light-mode");
       
       // Toggle button emoji based on mode
-      modeToggle.innerText = document.body.classList.contains("light-mode") ? "🌛" : "🌞";
+      modeToggle.innerText = document.body.classList.contains("light-mode") ? "🌞" : "🌛";
   });
 });
 
