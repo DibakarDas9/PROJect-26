@@ -360,7 +360,7 @@ video{
     -webkit-text-fill-color: transparent;
 }
 .typing-text::after {
-    content: "|";  /* Cursor effect */
+    content: "|"; 
     display: inline-block;
     transform-origin: center;
     animation: 0.7s infinite;

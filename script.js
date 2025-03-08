@@ -103,11 +103,11 @@ function typeEffect() {
 
     if (!isDeleting && charIndex === currentText.length + 1) {
         isDeleting = true;
-        timeout = setTimeout(typeEffect, delayBetweenTexts); // Wait-delete
+        timeout = setTimeout(typeEffect, delayBetweenTexts); 
         return;
     } else if (isDeleting && charIndex === -1) {
         isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length; // Move to next text
+        textIndex = (textIndex + 1) % texts.length; 
     }
 
     timeout = setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
