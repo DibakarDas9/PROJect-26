@@ -70,7 +70,51 @@ function prevSlide() {
     options[num - 1].classList.add("active");
   }
 
+  const texts = [
+    "Learn. Grow. Succeed. Anytime, Anywhere!",
+    "Skills for the real world!",
+    "Courses that shape your future.",
+    "Knowledge beyond classrooms, anytime!",
+    "Master skills, not just theories.",
+    "Your learning, your pace, your way!",
+    "Education that fits your life!",
+    "Upgrade your skills, upgrade your life!",
+    "Learn what truly matters!",
+    "Expert-led courses, limitless possibilities!"
+];
 
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingSpeed = 100;  
+const deletingSpeed = 50; 
+const delayBetweenTexts = 1500; 
+let timeout; 
+
+function typeEffect() {
+    const element = document.querySelector(".typing-text");
+    const currentText = texts[textIndex];
+
+    if (isDeleting) {
+        element.innerText = currentText.substring(0, charIndex--);
+    } else {
+        element.innerText = currentText.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentText.length + 1) {
+        isDeleting = true;
+        timeout = setTimeout(typeEffect, delayBetweenTexts); // Wait-delete
+        return;
+    } else if (isDeleting && charIndex === -1) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length; // Move to next text
+    }
+
+    timeout = setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
+}
+
+
+typeEffect();
 
 
 gsap.to("#nav", {

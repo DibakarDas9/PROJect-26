@@ -107,7 +107,7 @@
 .btn {
     background: linear-gradient(to left bottom, rgb(0, 0, 0), rgb(9, 73, 211));
     
-    color: white;
+    /* color: white; */
     border: none;
     padding: 10px 15px;
     font-size: 1em;
@@ -117,6 +117,7 @@
     border-radius: 5px;
 }
 .btn span{
+    color:white;
     display: inline-block;
     transition: transform 0.1s ease-in-out;
 }
@@ -125,7 +126,7 @@
 
 }
 .btn:hover span {
-    transform: scale(1.09); /* Increases text size */
+    transform: scale(1.09); 
 }
 
 
