@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   modeToggle.addEventListener("click", function() {
       document.body.classList.toggle("light-mode");
-      
-      // Toggle button emoji based on mode
-      // modeToggle.innerText = document.body.classList.contains("light-mode") ? "🌞" : "🌛";
   });
 });
 

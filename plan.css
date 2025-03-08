@@ -8,21 +8,21 @@
     font-size: 2.2em;
     margin-bottom: 30px;
     text-align: center;
-    background:linear-gradient(to left top, rgb(0, 0, 0), rgb(3, 6, 146),rgb(0, 0, 0));
+    background:linear-gradient(to right, rgb(255, 255, 255), rgb(44, 41, 56),rgb(255, 255, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* background: #00c3ff;  fallback for old browsers */
+    /* background: #00c3ff;  */
     /* background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff); 
     background: linear-gradient(to right, #ffff1c, #00c3ff); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
     position: relative;
 }
-.pricing-section h1:hover{
+/* .pricing-section h1:hover{
     background:linear-gradient(to right top, rgb(55, 148, 11), rgb(255, 255, 255),rgb(248, 134, 4));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 /* h1::before{
     content:"Empower your FUTURE from here!";
     position:absolute;
