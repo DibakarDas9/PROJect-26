@@ -764,7 +764,7 @@ video{
 
 .carousel {
     display: flex;
-    gap: 16px;
+    gap: 42px;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding-bottom: 10px;
@@ -781,7 +781,7 @@ video{
     background: rgba(255, 255, 255, 0.3);
     border-radius: 0% 25px;
     backdrop-filter: blur(10px);
-    padding: 12px;
+    padding: 20px;
     text-align: left;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s, filter 0.4s;
     /* scroll-snap-align: start; */
@@ -805,7 +805,7 @@ video{
 }
 
 .course-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 /* .course-card:active img {
     display: none;
@@ -821,7 +821,7 @@ video{
 
 .course-card h3 {
     color:#000;
-    font-size: 14px;
+    font-size: 15px;
     margin: 8px 0;
     font-weight: bold;
 }
