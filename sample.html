@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .faq {
+            border-bottom: 1px solid #ccc;
+        }
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .answer {
+            display: none;
+            padding: 15px;
+            background: #f9f9f9;
+        }
+        .arrow {
+            transition: transform 0.3s;
+        }
+        .open .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq">
+        <div class="question" onclick="toggleAnswer(this)">How are courses selected for the plans? <span class="arrow">▼</span></div>
+        <div class="answer">Courses are selected based on quality, ratings, and demand.</div>
+    </div>
+    
+    <div class="faq">
+        <div class="question" onclick="toggleAnswer(this)">How is Personal Plan different from buying a course? <span class="arrow">▼</span></div>
+        <div class="answer">With Personal Plan, you gain monthly access to a variety of courses instead of lifetime access to a single course.</div>
+    </div>
+    
+    <div class="faq">
+        <div class="question" onclick="toggleAnswer(this)">What languages does Enterprise Plan have content for? <span class="arrow">▼</span></div>
+        <div class="answer">Enterprise Plan offers content in multiple languages, including English, Spanish, and more.</div>
+    </div>
+    
+    <div class="faq">
+        <div class="question" onclick="toggleAnswer(this)">What is Udemy Business Pro? <span class="arrow">▼</span></div>
+        <div class="answer">Udemy Business Pro provides advanced learning tools like assessments, labs, and workspaces for tech learners.</div>
+    </div>
+    
+    <script>
+        function toggleAnswer(element) {
+            let answer = element.nextElementSibling;
+            let isOpen = answer.style.display === "block";
+            document.querySelectorAll('.answer').forEach(a => a.style.display = 'none');
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('open'));
+            
+            if (!isOpen) {
+                answer.style.display = "block";
+                element.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>

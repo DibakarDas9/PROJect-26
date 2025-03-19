@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarSoar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animation-container">
+        <div class="moon"></div>
+        <div class="stars"></div>
+        <div class="shooting-stars"></div>
+        <div class="fireworks"></div>
+        <div class="welcome-text"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let textElement = document.querySelector(".welcome-text");
+            let fullText = "Welcome to ScholarSoar <br>||নমস্কার🙏||";
+            let index = 0;
+
+            function typeText() {
+                if (index < fullText.length) {
+                    textElement.innerHTML = fullText.substring(0, index) + '<span class="cursor">|</span>';
+                    index++;
+                    setTimeout(typeText, 100);
+                } else {
+                    setTimeout(removeLetter, 1000);
+                }
+            }
+
+            function removeLetter() {
+                if (index > 0) {
+                    textElement.innerHTML = fullText.substring(0, index - 1) + '<span class="cursor">|</span>';
+                    index--;
+                    setTimeout(removeLetter, 100);
+                } else {
+                    shrinkToSquare();
+                }
+            }
+
+            function shrinkToSquare() {
+                let container = document.querySelector(".animation-container");
+                container.classList.add("shrink-square");
+
+                setTimeout(() => {
+                    container.classList.add("expand-full");
+                }, 1500);
+
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 2500); // No extra delay
+            }
+
+            typeText();
+        });
+
+        function createFirework() {
+            let firework = document.createElement("div");
+            firework.className = "firework";
+            firework.style.left = Math.random() * 100 + "vw";
+            firework.style.top = Math.random() * 50 + "vh";
+            document.querySelector(".fireworks").appendChild(firework);
+            setTimeout(() => firework.remove(), 2000);
+        }
+        setInterval(createFirework, 500);
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Snap+ITC&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #000, #111);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .animation-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            transition: transform 1.5s ease, filter 1.5s ease;
+        }
+
+        /* Shrink to Small Square */
+        .shrink-square {
+            animation: shrinkToSquare 1.5s forwards;
+        }
+
+        @keyframes shrinkToSquare {
+            0% {
+                transform: scale(1);
+                filter: blur(0);
+                background: white;
+                border-radius: 0%;
+            }
+            50% {
+                transform: scale(0.2);
+                filter: blur(5px);
+                background: white;
+                border-radius: 10%;
+            }
+            100% {
+                transform: scale(0.01);
+                filter: blur(10px);
+                background: white;
+                border-radius: 0%;
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        /* Expand White with Black Shadows */
+        .expand-full {
+            animation: expandWithShadow 1s forwards;
+        }
+
+        @keyframes expandWithShadow {
+            0% { 
+                transform: scale(0.01);
+                background: white;
+                box-shadow: 0 0 10px black;
+            }
+            50% { 
+                transform: scale(0.7);
+                background: white;
+                box-shadow: 0 0 150px black;
+            }
+            100% { 
+                transform: scale(1.5);
+                background: white;
+                box-shadow: 0 0 300px black;
+            }
+        }
+
+        /* Moon Glow Effect */
+        .moon {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #fff 40%, rgba(255, 255, 255, 0.2));
+            border-radius: 50%;
+            box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.9),
+                        0px 0px 80px rgba(255, 255, 255, 0.6),
+                        0px 0px 120px rgba(255, 255, 255, 0.4);
+            transform: translateX(-50%);
+            animation: moonGlow 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes moonGlow {
+            0% {
+                box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.8),
+                            0px 0px 80px rgba(255, 255, 255, 0.5),
+                            0px 0px 120px rgba(255, 255, 255, 0.3);
+            }
+            100% {
+                box-shadow: 0px 0px 60px rgba(255, 255, 255, 1),
+                            0px 0px 100px rgba(255, 255, 255, 0.7),
+                            0px 0px 150px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        /* Typing Effect */
+        .welcome-text {
+            font-family: 'Snap ITC', cursive;
+            font-size: 3rem;
+            color: white;
+            text-shadow: 0px 0px 20px white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            background: white;
+            animation: blink 0.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Shooting Stars */
+        .shooting-stars::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 50px;
+            background: white;
+            top: 20%;
+            left: 80%;
+            opacity: 0.8;
+            transform: rotate(45deg);
+            animation: shoot 1.5s infinite;
+        }
+
+        @keyframes shoot {
+            0% {
+                transform: translateX(0) translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-200px) translateY(200px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Fireworks */
+        .fireworks {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #ff0, #f00);
+            border-radius: 50%;
+            animation: explode 2s linear;
+        }
+
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(3); opacity: 0.5; }
+            100% { transform: scale(5); opacity: 0; }
+        }
+    </style>
+</body>
+</html>

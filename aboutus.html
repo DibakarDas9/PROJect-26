@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About-Us</title>
+ <link rel="icon" type="image/png" href="Files/Scholar_Soar_logo_1-removebg-preview.png">    
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+      html,body {
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
+      }
+      .stack-area {
+        width: 100%;
+        height: 300vh;
+        position: relative;
+        background: white;
+        display: flex;
+      }
+      .nav{
+        /* top:10%; */
+        height:90px;
+        width:100%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);  
+        position: relative; 
+        z-index: 1000; 
+      }
+      .nav img{
+        margin-bottom:5px;
+        height: 100%;
+        width: 110px;
+
+      }
+      .left {
+        height: 100vh;
+        flex-basis: 50%;
+        position: sticky;
+        top: 0;
+        left: 0;
+      }
+      .right {
+        height: 100vh;
+        flex-basis: 50%;
+        position: sticky;
+        top: 0;
+      }
+      /*Styling for the left elements content starts here...*/
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        align-items: center;
+        flex-direction: column;
+      }
+      .title {
+        width: 420px;
+        font-size: 84px;
+        font-family: poppins;
+        font-weight: 700;
+        line-height: 88px;
+        background:linear-gradient(to right, black, black, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .sub-title {
+        width: 420px;
+        font-family: poppins;
+        font-size: 14px;
+        margin-top: 30px;
+      }
+      
+      .detail {
+        font-family: poppins;
+        font-size: 14px;
+        padding: 15px 30px;
+        /* background: black; */
+        color: white;
+        border-radius: 8mm;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-top: 30px;
+        background:linear-gradient(to right, rgb(255, 255, 255), black, rgb(0, 0, 0));
+        transition: transform 0.3s;
+        
+      }
+      .detail:hover{
+        background:linear-gradient(to right, rgb(0, 0, 0), black, rgb(255, 255, 255));
+        transform: scale(0.9);
+
+      }
+
+      /*Styling for the left elements content ends here...*/
+
+      .card {
+        width: 350px;
+        height: 375px;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        position: absolute;
+        top: calc(50% - 175px);
+        left: calc(50% - 175px);
+        transition: 0.5s ease-in-out;
+      }
+      .card:nth-child(1) {
+        background:linear-gradient(to bottom,rgb(199, 107, 2),rgb(255, 255, 255),#18c202);
+
+      }
+      .card:nth-child(2) {
+        background: rgb(221, 62, 88);
+      }
+      .card:nth-child(3) {
+        background: rgb(186, 113, 245);
+      }
+      .card:nth-child(4) {
+        background: rgb(247, 92, 208);
+      }
+
+      /*Styling for the card content starts here...*/
+      .card {
+        box-sizing: border-box;
+        padding: 35px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+      .sub {
+        font-family: poppins;
+        font-size: 20px;
+        font-weight: 700;
+        
+      }
+      .content {
+        font-family: poppins;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        
+      }
+      .pic{
+        margin-left:29px;
+        border-radius: 50%;
+        height:190px;
+        width:190px;
+        object-fit: cover;
+        box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s ;
+      }
+      .pic:hover{
+        transform:scale(0.9) skew(2deg); 
+      }
+  
+      #spring{
+        margin-left:6px;
+        height:15px;
+        width:15px;
+      }
+      #db{
+        margin-left:6px;
+        height:17px;
+        width:20px;
+      }
+      #connect .mail {
+        color: rgb(129, 7, 7);
+        font-weight: bold;
+        text-decoration: line-through;
+        animation: blip 0.7s infinite alternate;
+        }
+      #connect .linkedin {
+        color: rgb(27, 6, 145);
+        font-weight: bold;
+        text-decoration: line-through;
+        animation: blip 0.7s infinite alternate;
+        }
+        @keyframes blip {
+            0% { filter:blur(1px); }
+            100% { filter:blur(0px);}
+        }
+      /*Styling for the card content ends here...*/
+      .away {
+        transform-origin: bottom left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <!-- <h1>Das</h1> -->
+      <a href="file:///C:/Users/91896/Desktop/Proj-26/index.html?">
+        <!-- <h3>ScholarSoar</h3> -->
+        <img src="C:\Users\91896\Desktop\Proj-26\Files\LOGODP.png" alt="no image">
+      </a>
+    </div>
+    <div class="stack-area">
+
+      <div class="left">
+        <div class="title">About Us</div>
+        <div class="sub-title">
+          We are <s>proud</s> students of Abacus Institute of Engineering and Management, united by a common vision—to ignite the spark of ambition in our fellow Soarians. Our mission is to empower, inspire, and uplift each other so that no dream feels too big, no goal seems out of reach. 
+          <br />
+          <a href="index.html"><button class="detail">GO BACK</button></a>
+
+        </div>
+      </div>
+      <div class="right">
+        <div class="card">
+          <div class="sub">Dibakar Das </div>
+          <img class="pic" src="C:\Users\91896\Desktop\Proj-26\about-us\Dibakar.jpg">
+          <div class="content">
+          Field of Interest: <i class="fa-brands fa-html5"></i> &nbsp; <i class="fa-brands fa-css3"></i> &nbsp; <i class="fa-brands fa-js"></i>&nbsp;
+          <img id="spring" src="https://static-00.iconduck.com/assets.00/spring-boot-icon-512x511-pza8zvqu.png">
+          <img id="db" src="https://cdn.iconscout.com/icon/free/png-512/free-mongodb-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-3032182.png?f=webp&w=512">
+          <span id="connect">
+          Connect with me via 
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dibakardas612@gmail.com" target="_blank" class="mail">mail</a> 
+          <a href="https://www.linkedin.com/in/dibakar-das-453653248/" target="_blank" class="linkedin">LinkedIn</a>
+          </span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="sub">Dipanjan Samanta</div>
+          <img class="pic" src="C:\Users\91896\Desktop\Proj-26\about-us\Dibakar.jpg">
+          <div class="content">Field of Interest: <i class="fa-brands fa-html5"></i> &nbsp; <i class="fa-brands fa-css3"></i> &nbsp; <i class="fa-brands fa-js"></i>&nbsp;
+            <img id="spring" src="https://static-00.iconduck.com/assets.00/spring-boot-icon-512x511-pza8zvqu.png">
+            <img id="db" src="https://cdn.iconscout.com/icon/free/png-512/free-mongodb-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-3032182.png?f=webp&w=512">
+            <span id="connect">
+            Connect with me via 
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dibakardas612@gmail.com" target="_blank" class="mail">mail</a> 
+            <a href="https://www.linkedin.com/in/dibakar-das-453653248/" target="_blank" class="linkedin">LinkedIn</a>
+            </span></div>
+        </div>
+        <div class="card">
+          <div class="sub">Soumadeep Dutta</div>
+          <img class="pic" src="C:\Users\91896\Desktop\Proj-26\about-us\soma.jpg">
+          <div class="content">Field of Interest: <i class="fa-brands fa-html5"></i> &nbsp; <i class="fa-brands fa-css3"></i> &nbsp; <i class="fa-brands fa-js"></i>&nbsp;
+            <img id="spring" src="https://static-00.iconduck.com/assets.00/spring-boot-icon-512x511-pza8zvqu.png">
+            <img id="db" src="https://cdn.iconscout.com/icon/free/png-512/free-mongodb-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-3032182.png?f=webp&w=512">
+            <span id="connect">
+            Connect with me via 
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dibakardas612@gmail.com" target="_blank" class="mail">mail</a> 
+            <a href="https://www.linkedin.com/in/dibakar-das-453653248/" target="_blank" class="linkedin">LinkedIn</a>
+            </span>
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="sub">Support</div>
+         <a href="index.html"><img  class="pic" src="C:\Users\91896\Desktop\Proj-26\Files\ScholarSoar logo 1.png"></a> 
+          <div class="content">Now its 24/7 support</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let cards = document.querySelectorAll(".card");
+
+      let stackArea = document.querySelector(".stack-area");
+
+      function rotateCards() {
+        let angle = 0;
+        cards.forEach((card, index) => {
+          if (card.classList.contains("away")) {
+            card.style.transform = `translateY(-120vh) rotate(-48deg)`;
+          } else {
+            card.style.transform = ` rotate(${angle}deg)`;
+            angle = angle - 10;
+            card.style.zIndex = cards.length - index;
+          }
+        });
+      }
+
+      rotateCards();
+
+      window.addEventListener("scroll", () => {
+        let distance = window.innerHeight * 0.5;
+
+        let topVal = stackArea.getBoundingClientRect().top;
+
+        let index = -1 * (topVal / distance + 1);
+
+        index = Math.floor(index);
+
+        for (i = 0; i < cards.length; i++) {
+          if (i <= index) {
+            cards[i].classList.add("away");
+          } else {
+            cards[i].classList.remove("away");
+          }
+        }
+        rotateCards();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="teach.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div id="nav" style="background-color: rgba(246, 160, 0, 0.726); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);  border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+        <a style="text-decoration: none;"href="index.html">
+            <img src="https://i.postimg.cc/L8MxqzB7/sdhf-removebg-preview.png" alt="no image">
+            <!-- <p>Scholar-<span>X</span>-Soar</p> -->
+        </a>
+            <button class="explore">Explore<i class="fas fa-solid fa-caret-down fa-beat-fade" style="color: #5000c7;"></i></button>
+            <div id="dropdownxplore">
+                <ul>
+                    <li><a href="#"class="noun">Development<i class="fas fa-solid fa-caret-right fa-beat-fade" style="color: #000000;"></i></a>
+                        <div class="development">
+                            <ul>
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">Mobile Development</a></li>
+                                <li><a href="#">Data Science</a></li>
+                                <li><a href="#">Game Development</a></li>
+                                <li><a href="#">Software Testing</a></li>
+                                <li><a href="#">No-Code Development</a></li>
+                            </ul>
+                        </div>
+                    
+                    </li>
+                    <li><a href="#"class="noun">Finance<i class="fas fa-solid fa-caret-right fa-beat-fade" style="color: #000000;"></i></a>
+                        <div class="development">
+                            <ul>
+                                <li><a href="#">Accounting and Book Keeping</a></li>
+                                <li><a href="#">Compliance</a></li>
+                                <li><a href="#">Crypto Currency & Blockchain </a></li>
+                                <li><a href="#">Economics</a></li>
+                                <li><a href="#">Finance</a></li>
+                                <li><a href="#">Invesing & Trading</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"class="noun">IT & Softwares<i class="fas fa-solid fa-caret-right fa-beat-fade" style="color: #000000;"></i></a>
+                        <div class="development">
+                            <ul>
+                                <li><a href="#">IT Certification</a></li>
+                                <li><a href="#">Network Secrity</a></li>
+                                <li><a href="#">Hardware</a></li>
+                                <li><a href="#">Game Development</a></li>
+                                <li><a href="#">Operating System and Servers</a></li> 
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#"class="noun">Design<i class="fas fa-solid fa-caret-right fa-beat-fade" style="color: #000000;"></i></a>
+                        <div class="development">
+                            <ul>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Graphics Design and Illustration</a></li>
+                                <li><a href="#">Data Science</a></li>
+                                <li><a href="#">Design Tools</a></li>
+                                <li><a href="#">Game Design</a></li>
+                                <li><a href="#">3d & Animation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"class="noun">Lifestyle<i class="fas fa-solid fa-caret-right fa-beat-fade" style="color: #000000;"></i></a>
+                        <div class="development">
+                            <ul>
+                                <li><a href="#">Beauty and Makeup</a></li>
+                                <li><a href="#">Esoteric Practice</a></li>
+                                <li><a href="#">Food and Beverage</a></li>
+                                <li><a href="#">Gaming</a></li>
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Pet care & Training</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"class="noun">Music<i class="fas fa-solid fa-caret-right fa-beat-fade" style="color: #000000;"></i></a>
+                        <div class="development">
+                            <ul>
+                                <li><a href="#">Vocal</a></li>
+                                <li><a href="#">Instrumental</a></li>
+                                <li><a href="#">Music Fundamentals</a></li>
+                                <li><a href="#">Music Technique</a></li>
+                                <li><a href="#">Music Production</a></li>
+                                <li><a href="#">Music Software</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="mobbtn" class="search-container">
+                <i class="fa-solid fa-magnifying-glass" id="searchIcon" style="color: #000000; cursor: pointer;"></i>
+                <input type="text" class="search-input" id="searchBox" placeholder="Search anything from here...">
+                <div id="suggestions" class="suggestions-list"></div> 
+            </div>
+        <a href="plans.html">
+            <button id="mobbtn" class="navbtn">Plans & Pricing</button>
+        </a>
+            <button id="navteach" class="navbtn">For Recruiters</button>
+            <div class="oncert">
+                <p>Hire skilled, verified, and job-ready talent with Scholar Soar.</p>
+                <button>Hire now </button>
+            </div>
+    
+            <button id="navteach" class="navbtn"onclick="location.href='teach.html';">Teach on ScholarSoar</button>
+            <div class="teach">
+                <p>Turn what you know into an opportunity and reach millions around the world.</p>
+                <button onclick="location.href='teach.html';">Know More</button>
+            </div>
+            <button id="mobbtn" class="cart">🛒</button>
+            
+            <form action="index2.html">
+            <button id="mobbtn1" class="login">Login</button>&nbsp;
+            <button id="mobbtn1" class="signup">Join Us</button>
+            </form>
+            <button id="mode-toggle"><i class="fat fa-solid fa-moon fa-bounce" style="color: #FFD43B;"></i></button>
+            <button class="bartoggle"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
+        </div>
+        <div class="page1">
+        <div class="bckperson">
+            <img src="https://img.freepik.com/free-photo/copy-space-woman-with-arms-crossed_23-2148666472.jpg?t=st=1742318936~exp=1742322536~hmac=f43d687affe49d1e7be74a77c234208c96f6bea8e5a3b44c3b8a71f9ece9aaab&w=1380" alt="no image">
+        </div>
+        <div class="sidetxt">
+            <h1>Come <span id="aniM">teach</span> with us</h1>
+            <p>Become an instructor and change lives -including your own</p>
+            <button class="anime">Get Started&#8599;</button>
+        </div>
+    </div>
+        <div class="page2" >
+                <h1 class="txt1" >Why late? Start you carrier now!</h1>
+            <div class="cellcontain">
+                <div class="elem1">
+                    <img src="https://s.udemycdn.com/teaching/value-prop-teach-2x-v3.jpg">
+                    <h3>Customize Your Teaching</h3>
+                    <p>Design and publish courses on your terms, ensuring full creative control over your content.</p>
+                </div>
+                <div class="elem1">
+                    <img src="https://s.udemycdn.com/teaching/value-prop-inspire-2x-v3.jpg">
+                    <h3>Empower Learners</h3>
+                    <p>Share your knowledge and help students expand their skills, explore new interests, and grow professionally.</p>
+                </div>
+                <div class="elem1">
+                    <img src="https://s.udemycdn.com/teaching/value-prop-get-rewarded-2x-v3.jpg">
+                    <h3>Earn and Grow</h3>
+                    <p>Monetize your expertise, build your reputation, and generate income with each successful enrollment.</p>
+                </div>
+            </div>
+        </div>
+        <div class="page3">
+            <section class="grid grid-3">
+                <div class="autoblur">LEARN</div>
+                <div class="autoblur">DESIGN</div>
+                <div class="autoblur">TEACH</div>
+                <div class="autoblur">GROW +</div>
+                <div class="autoblur">EXCELL &#8599;</div>
+            </section>
+        </div>
+        <div class="page4">
+            <h1>How to Get Started</h1>
+            <div class="tabs">
+                <div class="tab active" onclick="showContent('curriculum', 'img1')">Plan Your Course</div>
+                <div class="tab" onclick="showContent('video', 'img2')">Create Your Video</div>
+                <div class="tab" onclick="showContent('launch', 'img3')">Publish Your Course</div>
+            </div>
+            <div class="container1">
+                <div class="tabs-content">
+                    <div id="curriculum" class="content active">
+                        <p>Promote your course through social media and professional networks to gather initial ratings and reviews.<br>
+                        Your course will be visible in our marketplace, allowing you to earn revenue from every paid enrollment.<br></p><br>
+                        <h2> How We Support You</h2><br>
+                        <p> Leverage our custom coupon tool to offer special enrollment incentives. Our global promotions drive traffic to your course, and if selected for Udemy Business, you gain even more opportunities for success</p>
+                    </div>
+                    <div id="video" class="content">
+                        <h2>Create Your Video</h2>
+                        <p>Use a good camera and microphone to record high-quality videos. Ensure your content is engaging and well-structured.</p>
+                    </div>
+                    <div id="launch" class="content">
+                        <h2>Publish Your Course</h2>
+                        <p>Promote your course through social media, gather feedback, and optimize it for better reach and engagement.</p>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img id="img1" class="active" src="https://s.udemycdn.com/teaching/plan-your-curriculum-2x-v3.jpg" alt="Plan Your Course">
+                    <img id="img2" src="https://s.udemycdn.com/teaching/record-your-video-2x-v3.jpg" alt="Create Your Video">
+                    <img id="img3" src="https://s.udemycdn.com/teaching/launch-your-course-2x-v3.jpg" alt="Publish Your Course">
+                </div>
+            </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="https://i.postimg.cc/FzVHt5Zx/Scholar-Soar-logo-1.png" alt="Profile" class="profile-img">
+            <div class="footer-text">
+                <a href="aboutus.html" ><h3>About Us</h3></a>
+            </div>
+        </div>
+
+        <div class="footer-center">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+            <a href="#">Refund</a>
+        </div>
+
+        <div class="footer-right">
+            <a href="https://www.linkedin.com/in/dibakar-das-453653248/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/DibakarDas9/DibakarDas9" target="_blank"><i class="fab fa-github"></i></a>  
+            <a href="#"><i class="fab fa-facebook-f" target="_blank"></i></a>
+            <a href="#"><i class="fab fa-twitter" target="_blank"></i></a>
+            <a href="#"><i class="fab fa-instagram" target="_blank"></i></a>
+
+        </div>
+        <a href="#">
+            <svg id="scrollTrigger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62">
+                <g fill="black" fill-rule="nonzero">
+                    <!-- <path d="M31 .5C14.155.5.5 14.155.5 31S14.155 61.5 31 61.5 61.5 47.845 61.5 31 47.845.5 31 .5zm0 1c16.292 0 29.5 13.208 29.5 29.5S47.292 60.5 31 60.5 1.5 47.292 1.5 31 14.708 1.5 31 1.5z"></path> -->
+                    <path d="M38.974 33.704c-1.733-.021-5.35-1.67-15.577-1.712 3.83.877 7.425 2.418 7.318 4.622-.043 1.113-.728 1.926-1.947 1.947-.471 0-.963-.15-1.37-.556-1.37-1.37-1.284-4.922-6.098-6.398l-.407-.107c5.221-1.37 5.2-4.986 6.505-6.462.385-.428.942-.556 1.412-.556 1.156 0 1.883.813 1.905 1.947.021 2.204-3.66 3.787-7.51 4.643 10.377-.064 14.036-1.712 15.748-1.669 1.326 0 2.375.963 2.353 2.14 0 1.24-1.005 2.16-2.332 2.16z"></path>
+                </g>
+            </svg>
+            </a>
+    </footer>
+<script src="teach.js"></script>
+</body>
+</html>
