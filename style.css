@@ -559,7 +559,23 @@ video{
     z-index: -1;
     border-radius: 10px;
 }
+/* Responsive layout */
+/* Responsive adjustments for smartphones */
+@media (max-width: 768px) {
+    .slide {
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
 
+    .slide video {
+        width: 90%;  /* Adjusts video size for smaller screens */
+        height: auto; /* Maintains aspect ratio */
+        top: 10%; /* Adjust positioning */
+        left: 5%;
+        border-radius: 8px;
+    }
+}
 
 .content-box {
     top:25.5%;
