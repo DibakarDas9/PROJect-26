@@ -672,7 +672,7 @@ video{
 /* Small Mobile Screens */
 @media (max-width: 480px) {
     #page1 {
-        height: 45vh; /* Further reduce page1 size */
+        height: 100vh; /* Further reduce page1 size */
     }
 
     .slider-container {
@@ -685,21 +685,23 @@ video{
     }
 
     .content-box {
-        width: 75%;
+        width: 35%;
         padding: 8px;
-        font-size: 9px;
+        /* font-size: 1px; */
     }
 
     .content-box h2 {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .content-box h4 {
         font-size: 10px;
     }
-
+    .typing-text{
+        font-size: 1px;
+    }
     .content-box p {
-        font-size: 8px;
+        /* font-size: 2px; */
     }
 }
 
