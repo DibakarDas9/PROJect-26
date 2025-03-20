@@ -620,82 +620,36 @@ video{
 .controls button:hover {
     background: rgb(0, 0, 0);
 }
-/* Tablet (Below 1024px) */
+/* Responsive for Tablets (No Change in Size) */
 @media (max-width: 1024px) {
+    /* Keep it as it is */
+}
+
+/* Responsive for Mobile (Below 768px) */
+@media (max-width: 768px) {
+    .slider-container {
+        height: 40vh; /* Shrink slider to 40% of screen */
+        margin-top: 10vh; /* Ensure it appears after the nav */
+    }
+
     .slide video {
-        width: 100%;
-        height: 70%;
-        top: 0;
-        left: 0;
-        transform: none;
+        width: 85%; /* Reduce width */
+        height: 60%; /* Reduce height */
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .content-box {
-        width: 70%;
-        padding: 15px;
-        font-size: 16px;
+        width: 70%; /* Reduce size */
+        padding: 8px;
+        font-size: 12px;
         bottom: 5%;
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .content-box h2 {
-        font-size: 22px;
-    }
-
-    .content-box h4 {
-        font-size: 16px;
-    }
-
-    .content-box p {
-        font-size: 14px;
-    }
-}
-
-/* Mobile (Below 768px) */
-@media (max-width: 768px) {
-    .slide video {
-        width: 100%;
-        height: 60%;
-        top: 0;
-        left: 0;
-    }
-
-    .content-box {
-        width: 80%;
-        padding: 10px;
-        font-size: 14px;
-        bottom: 3%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .content-box h2 {
-        font-size: 18px;
-    }
-
-    .content-box h4 {
-        font-size: 14px;
-    }
-
-    .content-box p {
-        font-size: 12px;
-    }
-}
-
-/* Small Mobile (Below 480px) */
-@media (max-width: 480px) {
-    .slide video {
-        width: 100%;
-        height: 55%;
-    }
-
-    .content-box {
-        width: 90%;
-        padding: 8px;
-        font-size: 12px;
-    }
-
+    /* Reduce font sizes */
     .content-box h2 {
         font-size: 16px;
     }
@@ -706,6 +660,35 @@ video{
 
     .content-box p {
         font-size: 10px;
+    }
+}
+
+/* Responsive for Small Mobile (Below 480px) */
+@media (max-width: 480px) {
+    .slider-container {
+        height: 35vh; /* Reduce height further */
+    }
+
+    .slide video {
+        width: 80%;
+        height: 55%;
+    }
+
+    .content-box {
+        width: 75%;
+        font-size: 10px;
+    }
+
+    .content-box h2 {
+        font-size: 14px;
+    }
+
+    .content-box h4 {
+        font-size: 11px;
+    }
+
+    .content-box p {
+        font-size: 9px;
     }
 }
 
