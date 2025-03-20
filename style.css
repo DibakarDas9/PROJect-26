@@ -559,23 +559,7 @@ video{
     z-index: -1;
     border-radius: 10px;
 }
-/* Responsive layout */
-/* Responsive adjustments for smartphones */
-@media (max-width: 768px) {
-    .slide {
-        align-items: center;
-        justify-content: center;
-        padding-left: 0;
-    }
 
-    .slide video {
-        width: 90%;  /* Adjusts video size for smaller screens */
-        height: auto; /* Maintains aspect ratio */
-        top: 10%; /* Adjust positioning */
-        left: 5%;
-        border-radius: 8px;
-    }
-}
 
 .content-box {
     top:25.5%;
@@ -635,6 +619,97 @@ video{
 
 .controls button:hover {
     background: rgb(0, 0, 0);
+}
+/* Tablet (Below 1024px) */
+@media (max-width: 1024px) {
+    .slide video {
+        width: 90%;
+        height: 65%;
+    }
+
+    .content-box {
+        max-width: 80%;
+        padding: 20px;
+    }
+
+    .content-box h2 {
+        font-size: 24px;
+    }
+
+    .content-box h4 {
+        font-size: 18px;
+    }
+}
+
+/* Mobile (Below 768px) */
+@media (max-width: 768px) {
+    .slide {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    /* Center the video */
+    .slide video {
+        width: 100%;
+        height: 55%;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Center the content box at the bottom */
+    .content-box {
+        width: 90%;
+        padding: 12px;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    /* Decrease font sizes */
+    .content-box h2 {
+        font-size: 20px;
+    }
+
+    .content-box h4 {
+        font-size: 14px;
+    }
+
+    .content-box p {
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile (Below 480px) */
+@media (max-width: 480px) {
+    .slide video {
+        width: 100%;
+        height: 50%;
+        top: 5%;
+    }
+
+    .content-box {
+        width: 95%;
+        padding: 10px;
+        bottom: 3%;
+    }
+
+    .content-box h2 {
+        font-size: 18px;
+    }
+
+    .content-box h4 {
+        font-size: 13px;
+    }
+
+    .content-box p {
+        font-size: 11px;
+    }
 }
 
 
