@@ -16,8 +16,8 @@
 
 .light-mode {
     filter: invert(100%);
-    transition: filter 0.3s ease-in-out;
-    animation: smoothy 0.3s ease-in-out ;
+    /* transition: filter 0.3s ease-in-out;
+    animation: smoothy 0.3s ease-in-out ; */
 }
 
 @keyframes smoothy{
@@ -64,7 +64,6 @@ html, body{
     background-color: transparent;
     border: none;
     cursor:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 24 24"><path fill="%23FF5E5E" stroke="%23FFFFFF" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"></path></svg>'),auto;
-    transition: transform 0.2s, background 0.3s;
     z-index:99;
 }
 video{
@@ -549,29 +548,22 @@ video{
     padding-left: 5%;
 }
 
-.slide img {
-    width: 81%;
-    height: 75%;
-    object-fit: cover;
-    position: absolute;
-    top:14%;
-    left: 14%;
-    z-index: -1;
-}
+
 .slide video {
     width: 81%;
     height: 75%;
     object-fit: cover;
     position: absolute;
-    top:14%;
-    left: 14%;
+    top:13.5%;
+    left: 11%;
     z-index: -1;
+    border-radius: 10px;
 }
 
 
 .content-box {
-    top: 59%;
-    left: -9%;
+    top:25.5%;
+    left:5%;
     background: rgba(255, 255, 255, 0.9);
     padding: 30px;
     width: 350px;
@@ -847,8 +839,8 @@ video{
     position: absolute;
     top: 50%;
     transform: translatex(20%);
-    background: rgba(218, 215, 215, 0.9);
-    border: 2px solid #444;
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid #000000;
     padding: 14px;
     cursor: pointer;
     border-radius: 50%;
@@ -857,7 +849,13 @@ video{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 100;
 }
-
+.fast{
+    color:rgb(0, 0, 0);
+    transition: 0.3s ;
+}
+.fast:hover{
+    color:rgb(255, 255, 255);
+}
 .arrow:hover {
     background: #000000;
     transform: scale(1.2);
@@ -1428,4 +1426,16 @@ svg:active{
     to{
         tramsfrom:rotate(0deg);
     }
+}
+
+
+#hehe{
+    box-shadow: 
+    0 0 40px rgba(0, 0, 0, 0.5),  /* Outer deep blur */
+    0 0 80px rgba(0, 0, 0, 0.3),  /* Softer outer glow */
+    inset 0 0 30px rgba(255, 255, 255, 0.2), /* Inner glow */
+    inset -10px -10px 40px rgba(0, 0, 0, 0.4); /* Inner depth shadow */
+
+  /* Smooth transition for interaction */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
