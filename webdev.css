@@ -1,0 +1,100 @@
+#nav {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height:78px;
+    width: 100%;
+    z-index: 1000;  
+    padding: 10px 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 84px; /* Adjust to match navbar height */
+}
+
+iframe {
+    display: block;
+    margin-left:60px;
+    height:500px;
+    width: 70%;
+}
+.pagevid {
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.pagevid > div:first-child {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.pagevid > div:first-child div {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+}
+
+.pagevid > div:first-child div.active {
+    border-bottom: 3px solid #ff9800;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Ensure all headings and paragraphs are black */
+h2, p, h3,b {
+    color: black;
+}
+
+.rating {
+    color: #ff9800;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.pagevid ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.pagevid ul li {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    padding: 10px;
+    color: black;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #e8e8e8;
+    color: black;
+}

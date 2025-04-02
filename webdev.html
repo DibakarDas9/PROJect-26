@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="plan.css">
+    <link rel="stylesheet" href="webdev.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="nav">
-        <a style="text-decoration: none;"href="index.html">
+        <a style="text-decoration: none;"href="file:///C:/Users/91896/Desktop/Proj-26/index.html?">
             <img loading="lazy" src="https://i.postimg.cc/L8MxqzB7/sdhf-removebg-preview.png" alt="no image">
             <!-- <p>Scholar-<span>X</span>-Soar</p> -->
         </a>
@@ -106,11 +107,11 @@
                 <p>Hire skilled, verified, and job-ready talent with Scholar Soar.</p>
                 <button>Hire now </button>
             </div>
-    
-            <button id="navteach" class="navbtn">Teach on ScholarSoar</button>
+            
+            <button id="navteach" class="navbtn"onclick="location.href='teach.html';">Teach on ScholarSoar</button>
             <div class="teach">
                 <p>Turn what you know into an opportunity and reach millions around the world.</p>
-                <button>Know More</button>
+                <button onclick="location.href='teach.html';">Know More</button>
             </div>
             <button id="mobbtn" class="cart">🛒</button>
             
@@ -121,68 +122,52 @@
             <button id="mode-toggle"><i class="fat fa-solid fa-moon fa-bounce" style="color: #FFD43B;"></i></button>
             <button class="bartoggle"><i class="fa-solid fa-bars" style="color: #000000;"></i></button>
         </div>
-    <section class="pricing-section">
-        <h1 style="font-size:30px ;">"Right now, all our contents are accessible without any charges!"</h1>
-        <!-- <p>Don't want to buy courses one by one? Pick a plan to help you, your team, or your organization achieve outcomes faster.</p> -->
 
-        <div class="pricing-container">
-            <!-- Personal Plan -->
-            <div class="plan personal">
-                <h2>Xpulse</h2>
-                <p class="subheading">For you</p>
-                <p class="price">Starting at <span>₹999</span> per month</p>
-                <p class="billing">Billed monthly or annually. Cancel anytime.</p>
-                <button class="btn"><span>Start subscription →</span></button>
-                <ul>
-                    <li>✔ Access all major courses for a month</li>
-                    <li>✔ Certification prep</li>
-                    <li>✔ Goal-focused recommendations</li>
-                </ul>
-            </div>
 
-            <!-- Team Plan -->
-            <div class="plan team">
-                <h2>Xverse</h2>
-                <p class="subheading">For the hero behind</p>
-                <p class="price"><span>₹899</span> a year per user</p>
-                <p class="billing">Billed annually. Cancel anytime.</p>
-                <button class="btn"><span>Start subscription →</span></button>
-                <ul>
-                    <li>✔ Access to all courses for a year</li>
-                    <li>✔ Certification prep</li>
-                    <li>✔ Goal-focused recommendations</li>
-                    <li>✔ AI-powered coding exercises</li>
-                    <li>✔ Mentor Support(Limited for an hour)</li>
-                </ul>
-            </div>
-
-            <!-- Enterprise Plan -->
-            <div class="plan enterprise">
-                <h2>X-Astra</h2>
-                <p class="subheading">The ultimate plan that a real Hero opt for!</p>
-                <p class="price">Contact us for pricing</p>
-                <button class="btnenter"><span>You can opt for a demo →</span></button>
-                <ul>
-                    <li>✔ Access to all courses for 5 consecutive Years</li>
-                    <li>✔ Certification prep</li>
-                    <li>✔ Goal-focused recommendations</li>
-                    <li>✔ AI-powered coding exercises</li>
-                    <li>✔ Advanced analytics and insights</li>
-                    <li>✔ Dedicated Mentor Support</li>
-                    <li>✔ International courses</li>
-                    <li>✔ Customizable content</li>
-                    <li>✔ Hands-on tech training with add-on</li>
-                    <li>✔ Strategic implementation services with add-on</li>
-                </ul>
-            </div>
+    <iframe src="https://www.youtube.com/embed/ZxKM3DCV2kE" title="Full Course Web Development [22 Hours] | Learn Full Stack Web Development From Scratch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="pagevid">
+        <div>
+            <div onclick="switchTab(event, 'overview')">Overview</div>
+            <div onclick="switchTab(event, 'qa')">Q&A</div>
+            <div onclick="switchTab(event, 'reviews')">Reviews</div>
         </div>
-    </section>
-
-    <img id="bck" style="opacity: 0.5;" autoplay muted loop src="https://i0.wp.com/backgroundabstract.com/wp-content/uploads/edd/2022/02/5594016-e1656071131636.jpg?zoom=2&resize=1000%2C750&ssl=1">
-
-    <!-- <video autoplay muted loop src="C:\Users\91896\Desktop\Proj-26\Files\3009533-hd_1920_1080_24fps.mp4"></video> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    
+        <div id="overview" class="content active">
+            <h2>Become a Full-Stack Web Developer with just ONE course</h2>
+            <div class="rating">⭐ 4.7 (430,523 ratings)</div>
+            <p><b>Language:</b> English</p>
+            <p><b>Skill:</b> Web Development</p>
+        </div>
+    
+        <div id="qa" class="content">
+            <h3>Frequently Asked Questions</h3>
+            <ul>
+                <li>
+                    <button class="dropdown-btn" onclick="toggleAnswer(event)">What is the best way to learn web development? ▼</button>
+                    <div class="answer">The best way is to start with HTML, CSS, and JavaScript, then move to frameworks like React or Angular.</div>
+                </li>
+                <li>
+                    <button class="dropdown-btn" onclick="toggleAnswer(event)">How long does it take to become a full-stack developer? ▼</button>
+                    <div class="answer">It depends on dedication, but typically 6 months to 1 year with consistent practice.</div>
+                </li>
+                <li>
+                    <button class="dropdown-btn" onclick="toggleAnswer(event)">Which programming languages are needed for web development? ▼</button>
+                    <div class="answer">HTML, CSS, JavaScript for frontend, and languages like Python, PHP, or Node.js for backend.</div>
+                </li>
+            </ul>
+        </div>
+    
+        <div id="reviews" class="content">
+            <h3>Student Reviews</h3>
+            <ul>
+                <li>🌟🌟🌟🌟🌟 "Amazing course! Everything is well explained." - John D.</li>
+                <li>🌟🌟🌟🌟 "Great for beginners and intermediate learners." - Sarah M.</li>
+                <li>🌟🌟🌟🌟🌟 "Highly recommended! The best course I have taken." - Alex P.</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <script src="webdev.js"></script>
 </body>
 </html>

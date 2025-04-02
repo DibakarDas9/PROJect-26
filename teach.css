@@ -1,15 +1,28 @@
 html,body{
     scroll-behavior: smooth;
 }
-#nav{
+#nav {
+    background: rgba(255, 162, 0, 0.849); /* Light frosted effect */
+    -webkit-backdrop-filter: blur(15px); /* Smooth blur effect */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
+
 .page1{
     height:740px;
     width: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 
                 10px 10px 20px rgba(0, 0, 0, 0.15), 
                 15px 15px 30px rgba(0, 0, 0, 0.1);
+    
 }
 .bckperson img{
     object-fit: cover;
@@ -18,7 +31,10 @@ html,body{
     /* overflow: hidden; */
     position: relative;
     top:90px;
-    z-index:-1;
+    
+    /* z-index:-1; */
+
+    
 
 }
 .sidetxt{
@@ -207,6 +223,7 @@ top:-350px;
 }
 .page4 h1{
     color: black;
+    margin-bottom: 20px;
 }
 .container1 {
     margin-top:20px;
@@ -221,12 +238,13 @@ top:-350px;
     display: flex;
     justify-content: center;
     position: relative;
+    gap:50px;
    
 }
 .tabs::after {
     content: ""; /* Creates the bottom border */
     display: block;
-    width: 41.23%; /* Adjust this to change border width */
+    width: 44.23%; /* Adjust this to change border width */
     height: 2px; /* Border thickness */
     background-color: #535151; /* Border color */
     position: absolute;
@@ -262,7 +280,7 @@ top:-350px;
 }
 .image-container img {
     max-width: 100%;
-    height: 500px;
+    height: 400px;
     display: none;
 }
 .image-container img.active {
@@ -276,7 +294,7 @@ top:-350px;
 }
 .content p{
     font-weight:200;
-    font-size:22px;
+    font-size:20px;
     line-height: 29px;
     color:black;
 }
